@@ -1,0 +1,56 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+.calculator-grid {
+    display: grid;
+    margin-top: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+.calculator-grid > button {
+    border-radius: 10px;
+    font-size: 2rem;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none;
+    color: blue;
+    background-color: rgba(255, 254, 254, 0.50);
+}
+
+.calculator-grid > button:hover, 
+.calculator-grid > button:focus {
+    background-color: white;
+}
+.output {
+    grid-column: 1 / -1;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.50);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 8px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    font-size: 20px;
+    color:rgba(255, 254, 254, 0.75)
+}
+.output .current-operand {
+    font-size: 25px;
+    color:rgb(255, 255, 255)
+}
+
+.span-two {
+    grid-column: span 2;
+}
